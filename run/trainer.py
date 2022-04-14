@@ -124,7 +124,8 @@ def main_worker(ngpus_per_node, args):
     pprint.pprint(optimizer)
 
     cprint('=> building the dataloader ...', 'green')
-    train_loader = dataloader.train_loader(args)
+    # train_loader = dataloader.train_loader(args)
+    train_loader = dataloader.train_loader_webface(args)
 
     cprint('=> building the criterion ...', 'green')
     criterion = magface.MagLoss(
